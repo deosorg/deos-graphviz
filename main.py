@@ -3,7 +3,6 @@
 
 import json
 
-
 def csv_to_json(fname):
     i     = 0
     keys  = None
@@ -23,9 +22,12 @@ def csv_to_json(fname):
         f.write(json.dumps(store, sort_keys=True, indent=4))
     return store
 
+def build_var():
+    for item in ['root','plus']:
+        csv_to_json(item)
+
 def main():
-    print csv_to_json('root')
-    print csv_to_json('plus')
+    build_var()
 
 if __name__ == "__main__":
     main()
