@@ -2,18 +2,16 @@ include .env
 
 .DEFAULT_GOAL     := all
 .SUBLIME_TARGETS:    all
-.PHONY:              all\
-                     build\
-                     clean\
+.PHONY:              all   \
+                     build \
+                     clean \
                      venv
-
 FALSE             := 0
 TRUE              := 1
-
 IS_FALSE          := $(FALSE)
 IS_TRUE           := $(TRUE)
-
 IS_MAC            := Darwin
 IS_LINUX          := Linux
-
+GITREPO           := git@github.com:libdeos/deos-graphviz.git
+GITWIKI           := git@github.com:libdeos/deos-graphviz.wiki.git
 DOTVENV           := $(V)/.venv
