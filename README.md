@@ -1,4 +1,4 @@
-# [DeOS v0.00.0000][000] | `deos-graphviz` | [![Build Status][001]][002]
+# [ΔOS 0.00.0000-alpha.040.1][000] | `deos-graphviz` | [![Build Status][001]][002]
 
 [![var/assets/img/self-header.jpg][003]](https://github.com/libdeos/deos-graphviz/wiki)
 
