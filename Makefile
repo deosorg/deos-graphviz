@@ -24,5 +24,7 @@ wiki.push:
 	@-$(CD) $(DOTSWAP) && $(GITCLONE) $(GITWIKI) wiki
 	@-$(RM) $(SWAPWIKI)/*.md
 	@-$(CP) $(SWAPWIKI)/*.md $(SWAPWIKI)/
+	@-cd .swap/wiki && mkdir img
+	@-cp -a var/wiki/img/. .swap/wiki/img/
 	@-$(CD) $(SWAPWIKI) && $(GITADD) && $(GITCOMMIT) "$(WIKIMSG)" && $(GITPUSH)
 	@-$(RM) $(DOTSWAP)
