@@ -1,2 +1,4 @@
+include .deosrc
+
 all:
-	@-echo "Hello, world!"
+	@-python main.py
