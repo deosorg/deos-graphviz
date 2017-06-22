@@ -13,7 +13,7 @@ def load():
     i = 0
     store = []
     keys = None
-    with open("../data/root.csv") as f:
+    with open("../data/ethereum/root.csv") as f:
         for line in f:
             data = line.split('","')[1:-2]
             if i == 0:
