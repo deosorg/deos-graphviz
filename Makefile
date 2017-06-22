@@ -4,19 +4,19 @@ all: venv
 	$(MAKE) run
 
 run:
-	@-source $(DOTVENV)/bin/activate && $(CD) src && python main.py
+	@-$(ACTVENV) && $(CD) src && $(PY) main.py
 	@-dot -Tpng var/dot/g.dot > var/img/g.png
 
 venv:
 	@-$(RM) $(DOTVENV)
 	@-$(MKDIR) $(DOTVENV)
-	@-virtualenv --always-copy --no-site-packages $(DOTVENV)
-	@-source $(DOTVENV)/bin/activate && pip install -r etc/python/requirements.txt
+	@-$(VENV) $(DOTVENV)
+	@-$(ACTVENV) && $(PIPINSTALL) -r $(PYREQ)
 
 wiki.pull:
-	@-$(RM) var/wiki
-	@-$(CD) var && git $(GITCLONE) $(GITWIKI) wiki
-	@-$(RM) var/wiki/.git
+	@-$(RM) $(VARWIKI)
+	@-$(CD) $(VAR) && $(GITCLONE) $(GITWIKI) wiki
+	@-$(RM) $(VARWIKI)/.git
 
 wiki.push:
 	@-$(RM) $(DOTSWAP)
