@@ -1,10 +1,19 @@
 include .env
 
-FALSE    := 0
-TRUE     := 1
+.DEFAULT_GOAL     := all
+.SUBLIME_TARGETS:    all
+.PHONY:              all\
+                     build\
+                     clean\
+                     venv
 
-IS_FALSE := $(FALSE)
-IS_TRUE  := $(TRUE)
+FALSE             := 0
+TRUE              := 1
 
-IS_MAC   := Darwin
-IS_LINUX := Linux
+IS_FALSE          := $(FALSE)
+IS_TRUE           := $(TRUE)
+
+IS_MAC            := Darwin
+IS_LINUX          := Linux
+
+DOTVENV           := $(V)/.venv
