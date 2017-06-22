@@ -23,8 +23,8 @@ wiki.push:
 	@-$(MKDIR) $(DOTSWAP)
 	@-$(CD) $(DOTSWAP) && $(GITCLONE) $(GITWIKI) wiki
 	@-$(RM) $(SWAPWIKI)/*.md
-	@-$(CP) $(SWAPWIKI)/*.md $(SWAPWIKI)/
-	@-cd .swap/wiki && mkdir img
-	@-cp -a var/wiki/img/. .swap/wiki/img/
+	@-$(CP) $(VARWIKI)/*.md $(SWAPWIKI)/
+	@-$(CD) $(SWAPWIKI) && mkdir img
+	@-$(CP) -a $(VARWIKI)/img/. $(SWAPWIKI)/img/
 	@-$(CD) $(SWAPWIKI) && $(GITADD) && $(GITCOMMIT) "$(WIKIMSG)" && $(GITPUSH)
 	@-$(RM) $(DOTSWAP)
