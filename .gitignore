@@ -6,6 +6,7 @@
 #[dotfolders]
 .fseventsd/
 .internal/
+.venv/
 
 #[folders]
 obj/*
